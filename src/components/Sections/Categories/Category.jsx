@@ -1,22 +1,19 @@
 import React from 'react'
-import SectionHeading from './SectionsHeading' // Pastikan path sudah benar
-import Card from './Card' // Pastikan path sudah benar
+import SectionsHeading from '../SectionsHeading/SectionsHeading'
+import Card from '../../Card/Card'
 
-const Category = ({ title, data }) => {
+const Category = ({title,data}) => {
   return (
     <>
-      <SectionHeading title={title} />
-      {data && data.map((item, index) => {
+    <SectionsHeading title={title}/>
+    <div className='flex items-center px-8 flex-wrap gap-10'>
+    {data && data?.map((item,index)=>{
         return (
-          <Card
-            key={index}
-            title={item?.title}
-            description={item?.description}
-            imagePath={item?.image}
-            actionArrow={true}
-          />
+            <Card key={index} title={item?.title} description={item?.description} imagePath={item?.image}
+             actionArrow={true} height={'240px'} width={'200px'}/>
         )
-      })}
+    })}
+    </div>
     </>
   )
 }
