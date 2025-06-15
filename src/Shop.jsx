@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection/HeroSection.jsx';
 import NewArrivals from './components/Sections/NewArrivals.jsx';
 import Category from './components/Sections/Categories/Category.jsx';
 import content from './data/content.json';
+import Footer from './components/Footer/Footer.jsx'
 
 function Shop() {
   //const [count, setCount] = useState(0)
@@ -17,6 +18,7 @@ function Shop() {
         data={content?.categories[0]?.data}/>
     <Category title={content?.categories[1]?.title} 
         data={content?.categories[1]?.data}/>
+    <Footer content={content}/>
     </>
   )
 }
