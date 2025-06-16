@@ -3,6 +3,7 @@ import { Wishlist } from '../common/Wishlist'
 import { AccountIcon } from '../common/AccountIcon'
 import { CartIcon } from '../common/CartIcon'
 import './Navigation.css'
+import { Link, NavLink } from 'react-router-dom'
 
 const Navigation = () => {
   return (
@@ -15,10 +16,10 @@ const Navigation = () => {
         <div className='flex items-center flex-wrap gap-10 flex-1'>
             {/* Navigation Links */}
             <ul className='flex gap-14 text-gray-600 cursor-pointer'>
-                <li><a href='/' className='hover:text-black'>Shop</a></li>
-                <li><a href='/' className='hover:text-black'>Men</a></li>
-                 <li><a href='/' className='hover:text-black'>Women</a></li>
-                <li><a href='/' className='hover:text-black'>Kids</a></li>
+                <li><NavLink to='/' className={({isActive})=> isActive ? 'active-link':''}>Shop</NavLink></li>
+                <li><NavLink to='/mens' className='hover:text-black'>Men</NavLink></li>
+                 <li><NavLink to='/womens' className='hover:text-black'>Women</NavLink></li>
+                <li><NavLink to='/kids' className='hover:text-black'>Kids</NavLink></li>
             </ul>
         </div>
 
@@ -36,7 +37,7 @@ const Navigation = () => {
           <ul className='flex items-center gap-8'>
             <li><button><Wishlist/></button></li>
             <li><button><AccountIcon/></button></li>
-            <li><a href='/cart-items'><CartIcon/></a></li>
+            <li><Link to='/cart-items'><CartIcon/></Link></li>
           </ul>
         </div>
       </div>
