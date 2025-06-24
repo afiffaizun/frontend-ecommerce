@@ -5,14 +5,12 @@ import NewArrivals from './components/Sections/NewArrivals.jsx';
 import Category from './components/Sections/Categories/Category.jsx';
 import content from './data/content.json';
 import Footer from './components/Footer/Footer.jsx'
-import Navigation from './components/Navigation/Navigation.jsx';
 
 function Shop() {
   //const [count, setCount] = useState(0)
 
   return (
     <>
-    {/* <Navigation /> Tak Pindah neng main.jsx */}
     <HeroSection />
     <NewArrivals />
     <Category title={content?.categories[0]?.title} 

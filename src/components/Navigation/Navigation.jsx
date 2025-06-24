@@ -17,9 +17,9 @@ const Navigation = () => {
             {/* Navigation Links */}
             <ul className='flex gap-14 text-gray-600 cursor-pointer'>
                 <li><NavLink to='/' className={({isActive})=> isActive ? 'active-link':''}>Shop</NavLink></li>
-                <li><NavLink to='/mens' className='hover:text-black'>Men</NavLink></li>
-                 <li><NavLink to='/womens' className='hover:text-black'>Women</NavLink></li>
-                <li><NavLink to='/kids' className='hover:text-black'>Kids</NavLink></li>
+                <li><NavLink to='/men' className={({isActive})=> isActive ? 'active-link':''}>Men</NavLink></li>
+                 <li><NavLink to='/women' className={({isActive})=> isActive ? 'active-link':''}>Women</NavLink></li>
+                <li><NavLink to='/kids' className={({isActive})=> isActive ? 'active-link':''}>Kids</NavLink></li>
             </ul>
         </div>
 
