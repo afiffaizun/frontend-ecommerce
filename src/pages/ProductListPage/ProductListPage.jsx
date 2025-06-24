@@ -4,6 +4,7 @@ import content from '../../data/content.json'
 import Categories from '../../components/Filters/Categories';
 import PriceFilter from '../../components/Filters/PriceFilter';
 import ColorsFilter from '../../components/Filters/ColorsFilter';
+import SizeFilter from '../../components/Filters/SizeFilter';
 
 const categories = content?.categories;
 const ProductListPage = ({categoryType}) => {
@@ -29,9 +30,14 @@ const ProductListPage = ({categoryType}) => {
             
           {/* Filter Harga */}
             <PriceFilter />
+            <hr></hr>
           
           {/* Color */}
             <ColorsFilter colors={categoryContent?.meta_data?.colors} />
+            <hr></hr>
+
+          {/* Size */}
+            <SizeFilter sizes={categoryContent?.meta_data?.sizes} />
           </div>
         </div>
 
