@@ -11,13 +11,13 @@ function Shop() {
 
   return (
     <>
-    <HeroSection />
-    <NewArrivals />
-    <Category title={content?.categories[0]?.title} 
-        data={content?.categories[0]?.data}/>
-    <Category title={content?.categories[1]?.title} 
-        data={content?.categories[1]?.data}/>
-    <Footer content={content}/>
+      <HeroSection />
+      <NewArrivals />
+      {/* Tampilkan semua kategori yang ada di content.categories */}
+      {content?.categories?.map((cat) => (
+        <Category key={cat.id} title={cat.name} description={cat.description} />
+      ))}
+      <Footer content={content.footer} />
     </>
   )
 }
