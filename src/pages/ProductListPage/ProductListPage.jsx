@@ -12,6 +12,10 @@ const ProductListPage = ({categoryType}) => {
   const categoryContent = useMemo(() =>{
     return categories?.find((category)=> category.code === categoryType);
   },[categoryType]) 
+
+  const productListItems =useMemo(() => {
+    return content?.products?.filter((product)=> product?.category_id === categoryContent?.id);
+  }, [categoryContent])
   
   return (
     <div>
@@ -41,6 +45,8 @@ const ProductListPage = ({categoryType}) => {
           </div>
         </div>
 
+        <p className='text-black text-lg'>{categoryContent?.description}</p>
+          {/* Product */}
       </div>
     </div>
   )

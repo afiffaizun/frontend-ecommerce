@@ -16,6 +16,7 @@ export const colorSelector = {
 }
 
 const ColorsFilter = ({ colors }) => {
+  
   const [appliedColors, setAppliedColors] = useState([]);
   const onClickDiv = useCallback((item) => {
     if(appliedColors.includes(item)) {
@@ -24,6 +25,7 @@ const ColorsFilter = ({ colors }) => {
       setAppliedColors([...appliedColors, item]);
     }
   }, [appliedColors, setAppliedColors]);
+  
   return (
     <div className='flex flex-col mb-4'>
       <p className='text-[16px] text-black mt-5 mb-5'>Colors</p>
